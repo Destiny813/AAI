@@ -1,0 +1,23 @@
+﻿<Window x:Class="TaskManager.AddTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add New Task" Height="400" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox Name="TitleTextBox" Margin="0,0,0,10" 
+                     GotFocus="TitleTextBox_GotFocus" 
+                     LostFocus="TitleTextBox_LostFocus"/>
+            <ComboBox Name="PriorityComboBox" Margin="0,0,0,10">
+                <ComboBoxItem Content="Low" />
+                <ComboBoxItem Content="Medium" />
+                <ComboBoxItem Content="High" />
+            </ComboBox>
+            <TextBox Name="DescriptionTextBox" Margin="0,0,0,10" 
+                     Height="60" AcceptsReturn="True" 
+                     TextWrapping="Wrap" GotFocus="DescriptionTextBox_GotFocus" 
+                     LostFocus="DescriptionTextBox_LostFocus"/>
+            <DatePicker Name="DueDatePicker" Margin="0,0,0,10"/>
+            <Button Content="Add Task" Click="AddTaskButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
